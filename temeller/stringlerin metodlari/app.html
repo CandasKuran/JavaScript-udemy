@@ -1,0 +1,61 @@
+let value;
+
+const firstName = "Candas";
+const lastName = "Kuran";
+
+const langs = "Java,Python,C++";
+
+value = firstName + " " + lastName;
+
+
+value = "Mustafa Murat";
+
+value += "Coskun"; // value = value + "Coskun"
+
+
+value = firstName.length;
+
+//? uc uca ekleme yapmak icin concat kullanilir
+
+value = firstName.concat(" ",lastName," ","ekle");
+
+
+value = firstName.toLowerCase(); //? butun harfleri kucultur
+value = firstName.toUpperCase(); //? butun harfleri buyutur
+
+value = firstName[0];
+value = firstName[2];
+value = firstName[5];
+
+//? stringin boyunu bilmiyorssak bunu length ile yapabiliriz.
+
+value = firstName[firstName.length - 1];
+value = firstName[firstName.length - 3];
+
+// index of => kacinci indexte oldugunu soyler
+
+
+value = firstName.indexOf("n");
+
+
+// char at  bu da istedigimiz indekdeki elemani gosterir. 
+
+value = firstName.charAt(2);
+
+
+// Split  arrayi bu sekilde parcalamaya yarar
+
+value = langs.split(",");
+
+
+// Replace
+
+value = langs.replace("Python", "CSS");
+
+// includes 
+
+value = langs.includes("Java")  //? degerimizin icinde arama yapmamizi saglar. var iste true yok ise false doner
+
+
+console.log(value);
+

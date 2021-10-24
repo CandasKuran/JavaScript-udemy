@@ -1,0 +1,39 @@
+const name = "Mustafa Murat Coskun";
+const department = "Bilisim";
+const salary = "4000";
+
+//const a = "Isim: " + name + "\n" + "Departman: " + department +  "\n" + "Maas: " + salary;
+
+//* yukardaki yontem yerine bu sekilde `` icerisine yazarak yapabiliriz. 
+
+//* const a = `isim:${name}\nDepartman:${department}\nMaas:${salary}`
+
+
+
+// const  html = "<ul>" + 
+//               "<li>" + name + "</li>" +
+//               "<li>" + department + "</li>" +
+//               "<li>" + salary + "</li>" +
+//               "</ul>";
+
+
+//* bu sekilde yani template literal ile daha kolay yapilmakta
+
+function a() {
+    return "Merhaba canim";
+}
+
+//* burdaki fonksiyonu bu sekilde buraya da ekleyebiliyoruz,
+
+const html = `
+        <ul>
+          <li>${name}</li>
+          <li>${department}</li>
+          <li>${salary}</li>
+          <li>${10/4}</li>
+          <li>${a()}</li>
+        </ul>
+
+    `;
+
+document.body.innerHTML = html;

@@ -1,0 +1,94 @@
+// //* Fonksiyon tanimlama
+
+// function Merhaba(name = "Bilgi yok",age = "Bilgi yok") {
+//     //? asagiidaki kosulu yazmak yerine yukardeki degerlere default deger verebiliriz. yani
+//     //? function icerisine bir parametre gelmezse otomatik olarak bunlari yaz diyoruz.
+     // if(typeof name === "undefined") name = "bilgi yok"
+     // if(typeof age === "undefined") age = "bilgi yok"
+//     console.log(`isim: ${name} yas: ${age}`);
+// }
+
+// Merhaba("murat",25); // function call ( fonksiyon cagrisi)
+// Merhaba("ali",12)
+// Merhaba();
+// Merhaba("kadir")
+
+
+
+//! function bittikten sonra tekrar donmek icin console.log(); yerine return kullanilir
+// function square(x) {
+//     console.log(x*x);
+// }
+
+// function cube(x) {
+//     console.log(x*x*x);
+// }
+
+// let a = square(2);
+
+// a = cube(a);   //? burda NaN icktisi alacaz cunku ilk islemden sonra return edilmeid
+
+//-------------------------------------
+// //? return ile kullanimi 
+
+// function square(x) {
+//     return x*x;   //? retrun den sonra gelen hicbir islem calismaz.
+// }
+
+// function cube(x) {
+//     return x*x*x;
+// }
+
+// let a = cube(square(2));
+// console.log(a);
+
+
+
+//-------------------------------------
+
+
+// function merhaba() {
+//     return "merhaba";
+// }
+
+// console.log(merhaba());
+
+
+//TODO Function expression
+
+//? burda bir degerimizi bir fonksiyona esitleyerek kullanabiliriz.
+// const merhaba = function(name) {
+//     console.log("merhaba " + name);
+// }
+
+// merhaba("murat");
+
+
+//TODO Immediately Invoked Function Expression(IIFE) => tanimlandigi yerde calisan fonksiyon
+
+
+// (function (name) {
+//     console.log("merhaba: " + name);
+// })("candas");
+
+
+const   database = {
+    host: "localhost",
+    add: function() {
+        console.log("eklendi");
+    },
+    get: function() {
+        console.log("Elde edildi");
+    },
+    update: function(id) {
+        console.log(`Id: ${id} Guncellendi`);
+    },
+    delete: function(id) {
+        console.log(`Id: ${id} Silindi`);
+    }
+}
+
+console.log(database.host);
+
+database.add();
+database.delete(10);

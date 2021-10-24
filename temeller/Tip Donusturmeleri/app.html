@@ -1,0 +1,52 @@
+let value;
+
+// veri tiplerini stringe cevirme
+
+value = 123;
+value = String(123); //? bu sekilde degeri numbers olan value string olarak degisir
+value = String(true); //? burda ise bir boolean degerni stringe cevirdik
+value = String(false);
+value = String(function() {console.log()}); //? burda ise function u bir string e cevirdi
+value = String([1,2,3,4]) //? array de stringe donusur
+
+// stringe cevirmenin bir baska yolu daha vardir
+
+value = (123).toString(); //? bu sekilde de donusturulebilir
+
+// Veri tiplerini sayilara cevirme
+
+value = Number("123");
+value = Number(null);
+value = Number(undefined); //? NaN hatasi yani not a number sayi degil hatasi verir
+value = Number("Hello Word"); //? NaN hatasi burasi icinde gecerli
+                              //? NaN hatasi function ve arraylar icinde gecerli 
+
+value = Number("3.14");
+value = parseFloat("3.14");  //? float ve int degerleri ayrica bu sekidle de donusturulebilir.
+value = parseInt("3");
+
+// console.log(value);
+// console.log(typeof value);
+
+
+//-------------
+
+// const a = "Hello" + 34; //? js otomatik olark 34 u stringe cevirir ve Hello34 seklinde bir cikti aliriz.
+
+
+
+// console.log(a);
+// console.log(typeof a);
+
+//------------
+
+//? bu sekilde "34" + 53 ciktisi 3453 olur ama asagidaki gibi "34" u number yaparsak ciktimizi toplar ve type ise nubmer olur
+
+const a = Number("34") + 53;  
+console.log(a);
+
+
+
+
+
+

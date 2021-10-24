@@ -1,0 +1,41 @@
+let value;
+
+const programmer = {
+
+    name : "Candas Kuran",
+    age : 25,
+    email : "candas.kuran@gmail.com",
+    langs : ["Python","Java","JavaScript"],
+
+    adress : {
+        city : "Ankara",
+        street : "Bahcelievler"
+    },
+
+    work : function() {
+        console.log("Programci Calisiyor...");
+    }
+
+}
+
+value = programmer;
+
+value = programmer.email;
+
+value = programmer["email"]; //* bu sekilde de olur ama .email olarak kullanim genel kullanim
+
+value = programmer.langs;
+
+value = programmer.adress.city;
+
+programmer.work();
+
+
+const programmers = [
+
+    {name : "Candas Kuran", age:25},
+    {name : "Ali Veli", age : 25}
+]
+
+value = programmers[1].name;
+console.log(value);

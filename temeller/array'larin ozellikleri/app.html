@@ -1,0 +1,77 @@
+let value;
+
+
+const numbers = [12,32,45,17,213,1234,555];
+
+// const numbers = new Array(1,2,3,4,5,6,7) //* bu da ayni sekilde array olusturmak icin kullanili
+
+const lang = ["Python","Java","CSS","HTML"];
+
+const a = ["Merhaba",22,null,undefined,3.14];
+
+value = numbers.length;
+
+value = numbers[0];
+value = numbers[2];
+value = numbers[numbers.length - 1];
+
+
+
+//* index degerini degistirme
+
+
+numbers[2] = 1000;
+
+value = numbers;
+
+//* index of
+
+value = numbers.indexOf(1000);
+
+//* arrayin sonuna deger ekleme
+
+value = numbers.push(22);
+value = numbers;
+
+//* arrayin basina deger ekleme
+
+value = numbers.unshift(11);
+value = numbers;
+
+
+//* arrayin sonundan deger silme
+
+value = numbers.pop();
+value = numbers;
+
+//* arrayon basindan deger silme
+
+value = numbers.shift()
+value = numbers;
+
+
+//* arrayin icinden istedigimiz kismi silme
+
+numbers.splice(0,3)
+value = numbers;
+
+//* arrayi ters cevirme
+
+numbers.reverse();
+
+value = numbers;
+
+//* sort bu sort metodu sadece ilk elemana bakip siraladigi icin cok saglikli calismiyor
+//* onun icin boyle bir fonksiyon yazmamiz gerekiyor
+
+value = numbers.sort(function(x,y) { //* kucukten buyuge 
+    return x - y 
+});
+
+value = numbers.sort(function(x,y) {  //* buyukten kucuge dogru siralama
+    return y - x 
+});
+
+
+
+console.log(value);
